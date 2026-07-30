@@ -21,19 +21,19 @@ This repository provides a unified experimental framework for stress-testing the
 
 > **Core Objective:** Evaluate how classical biophysics and machine learning models handle progressive structural degradation across four distinct physical axes.
 
-* **Phase 1: Stress-Strain Curve (Isotropic Noise)**
+* **Stress-Strain Curve (Isotropic Noise)**
   * **Perturbation:** Random 3D Gaussian noise ($\sigma = 0.0\text{--}2.0\,\text{Å}$) applied universally across Cartesian coordinates.
   * **Focus:** Identifies the mathematical breaking point where latent vector spaces in Equivariant GNNs filter out noise better than rigid point-distance empirical lookups.
 
-* **Phase 2: Directional Anisotropy ($X, Y, Z$ Single-Axis Noise)**
+* **Directional Noise ($X, Y, Z$ Single-Axis Noise)**
   * **Perturbation:** Spatial noise restricted to a single Cartesian axis ($\sigma_x, \sigma_y,$ or $\sigma_z$).
   * **Focus:** Isolates Ångström-level sensitivity along individual axes to evaluate how asymmetric resolution (common in Cryo-EM and NMR) decouples empirical lookup tables.
 
-* **Phase 3: Coordinate Matrix Expansion (Uniform Topological Scaling)**
+* **Uniformity Scale (Uniform Topological Scaling)**
   * **Perturbation:** Uniform outward scaling of the coordinate matrix ($1\%, 2\%, 5\%, \dots$) relative to the structural centroid.
   * **Focus:** Tests topological vs. distance rigidity. Preserves 3D protein topology while stretching bond lengths out of equilibrium to test hard-coded physical bounds against relational graphs.
 
-* **Phase 4: Structural Memory Loss & Shell Fragmentation**
+* **Structural Memory Loss & Shell Fragmentation**
   * **Perturbation:** Layer-by-layer radial residue peeling from the protein exterior toward the hydrophobic core ($0\%$ to $70\%$).
   * **Focus:** Measures how progressive loss of surface titratable charges (Asp, Glu, Lys, Arg) causes catastrophic software crashes in empirical engines while demonstrating Equivariant GNN stability.
 
@@ -81,10 +81,10 @@ Benchmarking-Stress-Struc-Perturb-/
 │   └── outputs/                       <-- Calculated prediction tables and CSV logs
 ├── figures/                           <-- Saved high-resolution benchmark plots (.png)
 ├── notebooks/                         <-- Modular Jupyter Notebooks for each phase
-│   ├── 01_isotropic_noise_stress_strain.ipynb
-│   ├── 02_directional_anisotropic_noise.ipynb
-│   ├── 03_coordinate_matrix_scaling.ipynb
-│   └── 04_shell_fragmentation_memory_loss.ipynb
+│   ├── Stress_Strain_NoiseFail.ipynb
+│   ├── DirectionalNoise.ipynb
+│   ├── Memory_Loss.ipynb
+│   └── Uniform-Scale.ipynb
 └── src/                               <-- Core Python utility modules
     ├── __init__.py
     ├── peeling.py                     <-- Residue-level peeling & water-stripping logic
