@@ -1,4 +1,4 @@
-# Benchmarking-Stress-Struc-Perturb-
+# pH-StressTest
 
 > **A 4-part stress-testing framework benchmarking structural AI (GNNs) vs. classical biophysics (PROPKA, Hydride) under geometric and topological degradation.**
 
