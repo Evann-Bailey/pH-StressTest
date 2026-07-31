@@ -51,7 +51,7 @@ This repository provides an experimental framework for stress-testing these tool
 
 ### Summary of Model Robustness
 
-1. **Rule-Based Fragility (PROPKA & Hydride):**
+1. **Rule-Based Fragility (PROPKA & Hydride-Jax):**
    * Classical tools rely on strict geometric constraints. Noise or truncation breaks expected distance matrices, leading to execution failures or severe exponential error propagation.
 2. **AI Geometric Resilience (pHoptNN GNN):**
    * Message-passing architectures over relational node embeddings preserve global spatial invariants, allowing structural ML models to maintain reliable predictions even on heavily noisy or incomplete experimental structures.
