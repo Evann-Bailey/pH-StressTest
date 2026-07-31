@@ -64,8 +64,8 @@ This repository provides an experimental framework for stress-testing these tool
 Clone the repository and recreate the Conda environment:
 
 ``bash
-git clone [https://github.com/YOUR_USERNAME/Benchmarking-Stress-Struc-Perturb-.git](https://github.com/YOUR_USERNAME/Benchmarking-Stress-Struc-Perturb-.git)
-cd Benchmarking-Stress-Struc-Perturb-
+git clone [https://github.com/YOUR_USERNAME/Benchmarking-Stress-Struc-Perturb-.git](https://github.com/YOUR_USERNAME/pH-StressTest.git)
+cd ph-StressTest
 
 # Create and activate environment from environment.yml
 conda env create -f environment.yml
@@ -73,7 +73,7 @@ conda activate stress_strain_env
 ## Repository Structure
 
 ```text
-Benchmarking-Stress-Struc-Perturb-/
+ph-StressTest/
 ├── README.md                          <-- Master project overview & documentation
 ├── environment.yml                    <-- Conda environment export (stress_strain_env)
 ├── data/
