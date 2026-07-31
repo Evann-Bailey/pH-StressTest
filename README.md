@@ -1,6 +1,6 @@
 # pH-StressTest
 
-> **A 4-part stress-testing framework benchmarking structural AI (GNNs) vs. classical biophysics (PROPKA, Hydride) under geometric and topological degradation.**
+> **A 4-part stress-testing framework benchmarking structural AI (EGNN) vs. classical biophysics (PROPKA, Hydride-Jax) under geometric and topological degradation.**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,11 +9,11 @@
 
 ## Summary
 
-Modern structural bioinformatics relies heavily on two distinct paradigms: **classical/empirical physics tools** (e.g., PROPKA, Hydride) that compute properties via explicit local geometric dependencies, and **structural deep learning models** (e.g., Equivariant Graph Neural Networks / pHoptNN) that map 3D molecular graphs into latent vector representations.
+Modern structural bioinformatics relies heavily on two distinct paradigms: **classical/empirical physics tools** (e.g., PROPKA, Hydride-Jax) that compute properties via explicit local geometric dependencies, and **structural deep learning models** (ex. Equivariant Graph Neural Networks / pHoptNN) that map 3D molecular graphs into latent vector representations.
 
-This repository provides a unified experimental framework for stress-testing these tools. By systematically subjecting macromolecular structures (such as Concanavalin A, PDB: `1C57`) to controlled spatial, directional, topological, and fragmentation perturbations, this benchmark isolates:
+This repository provides an experimental framework for stress-testing these tools. By subjecting macromolecular structures (such as Concanavalin A, PDB: `1C57`) to controlled spatial, directional, topological and fragmentation perturbations, this benchmark isolates:
 1. **The exact breaking points** where classical empirical lookup tables and distance thresholds fail or crash.
-2. **The resilience and latent feature drift** ($\Delta\text{pH}$) in structural GNNs when surface electrostatics, coordinates, and topology are altered.
+2. **The resilience and latent feature drift** ($\Delta\text{pH}$) in structural EGNNs when surface electrostatics, coordinates and topology are altered.
 
 ---
 
